@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto CPWII Pac-Man</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Document Object Model</title>
-</head>
+    <style>
+      #gameCanvas {
+        box-shadow: 10px 10px 20px rgb(45, 53, 121);
+      }
+      h1 {
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: rgb(255, 0, 0, 0.644);
+      }
+      h2 {
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: rgb(255, 0, 0, 0.644);
+      }
+      p {
+        text-align: center;
+        font-size: large;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: rgb(155, 29, 50);
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 100vh;
+        background: linear-gradient(
+          0deg,
+          rgb(200, 213, 255) 0%,
+          rgb(137, 241, 255, 0.37) 100%
+        );
+      }
+    </style>
+    
+  </head>
 
-<body>
+  <body>
+    <div>
+      <h1>Pac-Man</h1>
+      <canvas id="gameCanvas"></canvas>
 
-   <h1>Document Object Model</h1>
-     <!-- Tarefa/Issue 1: -->
-     <h1>1</h1>
-          <!-- Implemente a função background do arquivo index.js -->
-          <button onclick="background()">Mudar bgcolor: #BECCC3</button>
+      <h2>Como jogar:</h2>
+      <p>
+        Use as setas do teclado para começar o jogo e se locomover. O objetivo é
+        recolher todas as esferas e desviar dos inimigos.
+      </p>
+    </div>
 
-     <!-- Issue 2: -->
-     <h2>2</h2>
-
-          <label for="fname">Nome:</label>
-          <input type="text" id="fname" name="fname" /><br/><br/>
-
-          <label for="lname">Sobrenome:</label>
-          <input type="text" id="lname" name="lname" /><br/><br/>
-
-          <!-- Implemente a função show do arquivo index.js -->
-          <button onclick="show()">Mostrar</button>
-
-          <!-- Utilize a div abaixo para apresentar os resultados na tela -->
-          <div id="result"></div>
-
-     <!-- Issue 3: -->
-     <h1>3</h1>
-
-        <label for="name">Nome:</label>
-        <!-- Implemente a função search do arquivo index.js -->
-        <input type="text" id="name" name="name" onkeyup="search();" /><br/><br/>
-
-        <!-- Utilize a div abaixo para apresentar os resultados na tela -->
-        <div id="search"></div>
-
-</body>
+    <script src="src/Game.js" type="module"></script>
+  </body>
 </html>
